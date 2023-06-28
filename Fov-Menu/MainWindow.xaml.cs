@@ -142,7 +142,7 @@ namespace Fov_Menu
 
         private void GithubButton_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Process.Start("explorer.exe", "https://github.com/idk");
+            Process.Start("explorer.exe", "https://github.com/ForzaMods/Forza-Mods-Fov-Menu");
         }
 
         private void DiscordButton_MouseDown(object sender, MouseButtonEventArgs e)
