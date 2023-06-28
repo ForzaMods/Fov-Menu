@@ -8,7 +8,7 @@ Honestly I have no idea. Its just .NET 7 so whatever that needs I guess.
 
 <h2 align="center">Features</h2>
 
-* Quick save and load = allows you to make your own presets and load them on the next startup
+* Quick save and load - allows you to make your own presets and load them on the next startup
 
 * Should be over forza updates as it uses array of byte scanning
 
