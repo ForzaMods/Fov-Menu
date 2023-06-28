@@ -44,7 +44,7 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <Rectangle x:Name="DiscordBox" Cursor="Hand" Grid.Column="1" HorizontalAlignment="Left" Height="35" Margin="10" VerticalAlignment="Bottom" Width="35" MouseDown="GithubButton_MouseDown">
+        <Rectangle x:Name="DiscordBox" Cursor="Hand" HorizontalAlignment="Left" Height="35" Margin="55,0,0,10" VerticalAlignment="Bottom" Width="40" MouseDown="DiscordButton_MouseDown">
             <Rectangle.Fill>
                 <SolidColorBrush Color="Black" Opacity="0"/>
             </Rectangle.Fill>
