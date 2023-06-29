@@ -84,6 +84,7 @@ namespace Fov_Menu
 
             while (true)
             {
+                Thread.Sleep(1000);
                 if (m.OpenProcess("ForzaHorizon5"))
                 {
                     if (Attached)
@@ -100,8 +101,6 @@ namespace Fov_Menu
                     NumericBoxes("Disable");
                     Attached = false;
                 }
-
-                Thread.Sleep(1000);
             }
         }
 
@@ -162,6 +161,7 @@ namespace Fov_Menu
         #region Saving/Loading
         private void SaveLoadBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
+            #region Vars
             ComboBox comboBox = (ComboBox)sender;
             ComboBoxItem selectedItem = (ComboBoxItem)comboBox.SelectedItem;
             var selectedOption = selectedItem.Content.ToString();
@@ -172,9 +172,11 @@ namespace Fov_Menu
             saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Forza Mods Fov Menu";
             saveFileDialog.Filter = "INI Files (*.ini)|*.ini";
             var SettingsParser = new FileIniDataParser();
+            #endregion
 
             switch (selectedOption)
             {
+                #region Saving
                 case "Save":
                     if (saveFileDialog.ShowDialog() == true)
                     {
@@ -195,7 +197,8 @@ namespace Fov_Menu
                         SettingsParser.WriteFile(SelectedFilePath, Settings);
                     }
                     break;
-
+                #endregion
+                #region Loading
                 case "Load":
                     if (openFileDialog.ShowDialog() == true)
                     {
@@ -228,6 +231,21 @@ namespace Fov_Menu
                             BumperMaxBox.Value = bumperMaxValue;
                     }
                     break;
+                #endregion
+                #region Default
+                case "Default":
+                    ChaseMinBox.Value = 43.5;
+                    ChaseMaxBox.Value = 65;
+                    FarChaseMinBox.Value = 43.5;
+                    FarChaseMaxBox.Value = 65;
+                    DriverAndDashMinBox.Value = 40;
+                    DriverAndDashMaxBox.Value = 55;
+                    HoodMinBox.Value = 40;
+                    HoodMaxBox.Value = 70;
+                    BumperMinBox.Value = 40;
+                    BumperMaxBox.Value = 70;
+                    break;
+                #endregion
             }
         }
         #endregion

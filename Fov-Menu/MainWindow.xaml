@@ -52,9 +52,10 @@
 
         <mah:ToggleSwitch x:Name="TopMost" Header="Top Most" Toggled="TopMost_Toggled" Margin="319,385,0,0" VerticalAlignment="Top"/>
 
-        <ComboBox x:Name="SaveLoadBox" Height="25" Width="100" Margin="200,411,100,13" SelectionChanged="SaveLoadBox_SelectionChanged">
+        <ComboBox x:Name="SaveLoadBox" Height="25" Width="100" Margin="200,411,100,13" SelectionChanged="SaveLoadBox_SelectionChanged" BorderThickness="0">
             <ComboBoxItem Content="Save"/>
             <ComboBoxItem Content="Load"/>
+            <ComboBoxItem Content="Default"/>
         </ComboBox>
 
         <Label Content="Chase Min Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="26,39,0,0"/>
