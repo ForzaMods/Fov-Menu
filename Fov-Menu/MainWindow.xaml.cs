@@ -89,7 +89,15 @@ namespace Fov_Menu
                 {
                     if (Attached)
                         continue;
-                    Task.Run(Scanning);
+                    Task.Run(() => Scanning(5));
+
+                    Attached = true;
+                }
+                else if (m.OpenProcess("ForzaHorizon4"))
+                {
+                    if (Attached)
+                        continue;
+                    Task.Run(() => Scanning(4));
 
                     Attached = true;
                 }
@@ -104,26 +112,45 @@ namespace Fov_Menu
             }
         }
 
-        async void Scanning()
+        async void Scanning(int ver)
         {
-            var TargetProcess = Process.GetProcessesByName("ForzaHorizon5")[0];
+            var TargetProcess = Process.GetProcessesByName("ForzaHorizon" + ver.ToString())[0];
             long ScanStart = (long)TargetProcess.MainModule.BaseAddress;
             long ScanEnd = (long)(TargetProcess.MainModule.BaseAddress + TargetProcess.MainModule.ModuleMemorySize);
             Base = 0;
 
             while (Base == 0)
-                Base = (await m.AoBScan(ScanStart, ScanEnd, "00 00 ? ? 00 00 82 42 00 00 90 40 CD CC 8C 40 1F 85 2B 3F 00 00 00 40", true, true, false)).FirstOrDefault();
-            
-            ChaseMin = Base.ToString("X");
-            ChaseMax = (Base + 0x4).ToString("X");
-            FarChaseMin = (Base + 0x90).ToString("X");
-            FarChaseMax = (Base + 0x94).ToString("X");
-            DriverAndDashboardMin = (Base + 0x45C).ToString("X");
-            DriverAndDashboardMax = (Base + 0x460).ToString("X");
-            HoodMin = (Base + 0x39C).ToString("X");
-            HoodMax = (Base + 0x3A0).ToString("X");
-            BumperMin = (Base + 0x3FC).ToString("X");
-            BumperMax = (Base + 0x400).ToString("X");
+                Base = (await m.AoBScan(ScanStart, ScanEnd, "00 00 ? ? 00 00 ? 42 00 00 90 40 CD CC 8C 40 1F 85 2B 3F 00 00 00 40", true, true, false)).FirstOrDefault();
+
+
+            if (ver == 5)
+            {
+                ChaseMin = Base.ToString("X");
+                ChaseMax = (Base + 0x4).ToString("X");
+                FarChaseMin = (Base + 0x90).ToString("X");
+                FarChaseMax = (Base + 0x94).ToString("X");
+                DriverAndDashboardMin = (Base + 0x45C).ToString("X");
+                DriverAndDashboardMax = (Base + 0x460).ToString("X");
+                HoodMin = (Base + 0x39C).ToString("X");
+                HoodMax = (Base + 0x3A0).ToString("X");
+                BumperMin = (Base + 0x3FC).ToString("X");
+                BumperMax = (Base + 0x400).ToString("X");
+            }
+
+            else if (ver == 4)
+            {
+                ChaseMin = Base.ToString("X");
+                ChaseMax = (Base + 0x4).ToString("X");
+                FarChaseMin = (Base + 0x50).ToString("X");
+                FarChaseMax = (Base + 0x54).ToString("X");
+                DriverAndDashboardMin = (Base - 0x84).ToString("X");
+                DriverAndDashboardMax = (Base + 0x460).ToString("X");
+                HoodMin = (Base - 0xE4).ToString("X");
+                HoodMax = (Base + 0x3A0).ToString("X");
+                BumperMin = (Base - 0x144).ToString("X");
+                BumperMax = (Base + 0x400).ToString("X");
+            }
+
             NumericBoxes("Enable");
         }
         #endregion
