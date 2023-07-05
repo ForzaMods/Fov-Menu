@@ -50,37 +50,37 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <mah:ToggleSwitch x:Name="TopMost" Header="Top Most" Toggled="TopMost_Toggled" Margin="319,385,0,0" VerticalAlignment="Top"/>
+        <mah:ToggleSwitch x:Name="TopMost" Header="Top Most" Toggled="TopMost_Toggled" Margin="319,385,0,0" VerticalAlignment="Top" Focusable="False"/>
 
-        <ComboBox x:Name="SaveLoadBox" Height="25" Width="100" Margin="200,411,100,13" SelectionChanged="SaveLoadBox_SelectionChanged" BorderThickness="0">
-            <ComboBoxItem Content="Save"/>
-            <ComboBoxItem Content="Load"/>
-            <ComboBoxItem Content="Default"/>
+        <ComboBox x:Name="SaveLoadBox" Height="25" Width="100" Margin="200,411,100,13" SelectionChanged="SaveLoadBox_SelectionChanged" BorderThickness="0" Focusable="False">
+            <ComboBoxItem Content="Save" Focusable="False"/>
+            <ComboBoxItem Content="Load" Focusable="False"/>
+            <ComboBoxItem Content="Default" Focusable="False"/>
         </ComboBox>
 
-        <Label Content="Chase Min Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="26,39,0,0"/>
-        <Label Content="Chase Max Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="275,39,0,0"/>
-        <mah:NumericUpDown Maximum="43.5" Minimum="0" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="ChaseMinBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,265,359" ValueChanged="ChaseMinBox_ValueChanged" BorderThickness="0"/>
-        <mah:NumericUpDown Minimum="65" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="ChaseMaxBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,15,359" ValueChanged="ChaseMaxBox_ValueChanged" BorderThickness="0"/>
+        <Label Focusable="False" Content="Chase Min Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="26,39,0,0"/>
+        <Label Focusable="False" Content="Chase Max Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="275,39,0,0"/>
+        <mah:NumericUpDown Focusable="False" Maximum="43.5" Minimum="0" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="ChaseMinBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,265,359" ValueChanged="ChaseMinBox_ValueChanged" BorderThickness="0"/>
+        <mah:NumericUpDown Focusable="False" Minimum="65" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="ChaseMaxBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,15,359" ValueChanged="ChaseMaxBox_ValueChanged" BorderThickness="0"/>
 
-        <Label Content="Far Chase Min Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,108,0,0"/>
-        <Label Content="Far Chase Max Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="266,108,0,0"/>
-        <mah:NumericUpDown Maximum="43.5" Minimum="0" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="FarChaseMinBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,265,290" ValueChanged="FarChaseMinBox_ValueChanged" BorderThickness="0"/>
-        <mah:NumericUpDown Minimum="65" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="FarChaseMaxBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,15,290" ValueChanged="FarChaseMaxBox_ValueChanged" BorderThickness="0"/>
+        <Label Focusable="False" Content="Far Chase Min Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,108,0,0"/>
+        <Label Focusable="False" Content="Far Chase Max Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="266,108,0,0"/>
+        <mah:NumericUpDown Focusable="False" Maximum="43.5" Minimum="0" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="FarChaseMinBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,265,290" ValueChanged="FarChaseMinBox_ValueChanged" BorderThickness="0"/>
+        <mah:NumericUpDown Focusable="False" Minimum="65" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="FarChaseMaxBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,15,290" ValueChanged="FarChaseMaxBox_ValueChanged" BorderThickness="0"/>
 
-        <Label Content="Driver/Dashboard Min Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,173,0,0"/>
-        <Label Content="Driver/Dashboard Max Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="238,173,0,0"/>
-        <mah:NumericUpDown Maximum="40" Minimum="0" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="DriverAndDashMinBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,265,225" ValueChanged="DriverAndDashMinBox_ValueChanged" BorderThickness="0"/>
-        <mah:NumericUpDown Minimum="55" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="DriverAndDashMaxBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,15,225" ValueChanged="DriverAndDashMaxBox_ValueChanged" BorderThickness="0"/>
+        <Label Focusable="False" Content="Driver/Dashboard Min Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,173,0,0"/>
+        <Label Focusable="False" Content="Driver/Dashboard Max Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="238,173,0,0"/>
+        <mah:NumericUpDown Focusable="False" Maximum="40" Minimum="0" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="DriverAndDashMinBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,265,225" ValueChanged="DriverAndDashMinBox_ValueChanged" BorderThickness="0"/>
+        <mah:NumericUpDown Focusable="False" Minimum="55" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="DriverAndDashMaxBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,15,225" ValueChanged="DriverAndDashMaxBox_ValueChanged" BorderThickness="0"/>
 
-        <Label Content="Hood Min Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,238,0,0"/>
-        <Label Content="Hood Max Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="276,238,0,0"/>
-        <mah:NumericUpDown Maximum="40" Minimum="0" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="HoodMinBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,265,160" ValueChanged="HoodMinBox_ValueChanged" BorderThickness="0"/>
-        <mah:NumericUpDown Minimum="70" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="HoodMaxBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,15,160" ValueChanged="HoodMaxBox_ValueChanged" BorderThickness="0"/>
+        <Label Content="Hood Min Value" Focusable="False" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,238,0,0"/>
+        <Label Content="Hood Max Value" Focusable="False" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="276,238,0,0"/>
+        <mah:NumericUpDown Maximum="40" Focusable="False" Minimum="0" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="HoodMinBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,265,160" ValueChanged="HoodMinBox_ValueChanged" BorderThickness="0"/>
+        <mah:NumericUpDown Minimum="70" Focusable="False" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="HoodMaxBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,15,160" ValueChanged="HoodMaxBox_ValueChanged" BorderThickness="0"/>
 
-        <Label Content="Bumper Min Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,308,0,0"/>
-        <Label Content="Bumper Max Value" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="270,308,0,0"/>
-        <mah:NumericUpDown Maximum="40" Minimum="0" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="BumperMinBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,265,90" ValueChanged="BumperMinBox_ValueChanged" BorderThickness="0"/>
-        <mah:NumericUpDown Minimum="70" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="BumperMaxBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,15,90" ValueChanged="BumperMaxBox_ValueChanged" BorderThickness="0"/>
+        <Label Content="Bumper Min Value" Focusable="False" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,308,0,0"/>
+        <Label Content="Bumper Max Value" Focusable="False" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="270,308,0,0"/>
+        <mah:NumericUpDown Maximum="40" Focusable="False" Minimum="0" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="BumperMinBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,265,90" ValueChanged="BumperMinBox_ValueChanged" BorderThickness="0"/>
+        <mah:NumericUpDown Minimum="70" Focusable="False" TrackMouseWheelWhenMouseOver="True" ParsingNumberStyle="Float" x:Name="BumperMaxBox" TextAlignment="Left" NumericInputMode="Decimal" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,15,90" ValueChanged="BumperMaxBox_ValueChanged" BorderThickness="0"/>
     </Grid>
 </Window>
