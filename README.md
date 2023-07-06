@@ -1,5 +1,7 @@
 <h1 align="center">Forza Mods Fov Menu</h1>
 
+**Works for FH4 & 5**
+
 A small tool written in c# to change the limits of fov
 
 <h2 align="center">Requirements</h2>
