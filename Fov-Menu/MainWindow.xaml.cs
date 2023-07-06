@@ -144,11 +144,11 @@ namespace Fov_Menu
                 FarChaseMin = (Base + 0x50).ToString("X");
                 FarChaseMax = (Base + 0x54).ToString("X");
                 DriverAndDashboardMin = (Base - 0x84).ToString("X");
-                DriverAndDashboardMax = (Base + 0x460).ToString("X");
+                DriverAndDashboardMax = (Base - 0x80).ToString("X");
                 HoodMin = (Base - 0xE4).ToString("X");
-                HoodMax = (Base + 0x3A0).ToString("X");
+                HoodMax = (Base - 0xE0).ToString("X");
                 BumperMin = (Base - 0x144).ToString("X");
-                BumperMax = (Base + 0x400).ToString("X");
+                BumperMax = (Base - 0x140).ToString("X");
             }
 
             NumericBoxes("Enable");
