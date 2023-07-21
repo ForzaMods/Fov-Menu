@@ -129,12 +129,12 @@ namespace Fov_Menu
                 ChaseMax = (Base + 0x4).ToString("X");
                 FarChaseMin = (Base + 0x90).ToString("X");
                 FarChaseMax = (Base + 0x94).ToString("X");
-                DriverAndDashboardMin = (Base + 0x45C).ToString("X");
-                DriverAndDashboardMax = (Base + 0x460).ToString("X");
-                HoodMin = (Base + 0x39C).ToString("X");
-                HoodMax = (Base + 0x3A0).ToString("X");
-                BumperMin = (Base + 0x3FC).ToString("X");
-                BumperMax = (Base + 0x400).ToString("X");
+                DriverAndDashboardMin = (Base + 0x44C).ToString("X");
+                DriverAndDashboardMax = (Base + 0x450).ToString("X");
+                BumperMin = (Base + 0x38C).ToString("X");
+                BumperMax = (Base + 0x390).ToString("X");
+                HoodMin = (Base + 0x3EC).ToString("X");
+                HoodMax = (Base + 0x3F0).ToString("X");
             }
 
             else if (ver == 4)
@@ -183,6 +183,7 @@ namespace Fov_Menu
                 mainWin.Topmost = true;
             else
                 mainWin.Topmost = false;
+
         }
         #endregion
         #region Saving/Loading
